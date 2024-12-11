@@ -1,0 +1,42 @@
+@use 'variables' as v;
+
+@mixin cell {
+    @media (min-width: v.$cell) {
+            @content;
+    }
+}
+
+@mixin tablet {
+    @media (min-width: v.$tablet) {
+            @content;
+    }
+}
+
+@mixin desktop {
+    @media (min-width: v.$desktop) {
+            @content;
+    }
+}
+
+@mixin desktopXL {
+    @media (min-width: v.$desktopXL) {
+            @content;
+    }
+}
+
+@mixin conte {
+    width: 95%;
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
+@mixin grid($colum : 2) {
+    display: grid;
+    grid-template-columns: repeat($colum, 1fr);
+}
+
+@mixin resetList {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}

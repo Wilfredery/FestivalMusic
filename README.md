@@ -1,2 +1,2 @@
 # FestivalMusic
-Learning SASS and Gulp. Creating a new web site.
+Creating a new project. JS join in since now.

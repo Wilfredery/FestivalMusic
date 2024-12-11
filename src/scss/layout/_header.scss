@@ -1,0 +1,50 @@
+@use 'base/variables' as v;
+@use 'base/mixin' as m;
+
+.header {
+    background-color: v.$verde;
+
+    .conte-header {
+        padding: 2rem;
+        @include m.tablet {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+
+    h1 {
+        color: v.$blanco;
+        text-align: center;
+        @include m.tablet {
+            margin: 0;
+            text-align: left;
+            margin-right: 1rem;
+        }
+    }
+}
+
+.navPrin {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include m.tablet {
+        flex-direction: row;
+    }
+    a {
+        color: v.$blanco;
+        margin: 2rem;
+        font-size: 2.4rem;
+        
+        &:hover {
+            color: v.$amarillo;
+        }
+    }
+}
+
+@mixin contenedor {
+    width: 95%;
+    max-width: 120rem;
+    margin: 0 auto;
+}

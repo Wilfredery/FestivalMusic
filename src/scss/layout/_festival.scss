@@ -1,0 +1,33 @@
+@use 'base/variables' as v;
+@use 'base/mixin' as m;
+
+.sobre-fest {
+    @include m.conte;
+
+    @include m.tablet {
+
+        @include m.grid(2);
+
+        .conte-festival {
+            margin: 0 2rem;
+        }
+    }   
+}
+
+@include m.tablet {
+    .sobre-fest {
+        margin-top: 5rem;
+    }
+}
+.conte-festival {
+    h2 {
+        margin-bottom: 2rem;
+    }
+
+    .fecha {
+        color: v.$verde;
+        font-weight: bold;
+    }
+}
+
+
