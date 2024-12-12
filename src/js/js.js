@@ -2,6 +2,7 @@ document.addEventListener('DOMContentLoaded', function() {
     navfija();
     createGallery();
     resaltarEnlace();
+    scrollNav();
 })
 
 function navfija() {
@@ -97,6 +98,23 @@ function resaltarEnlace() {
             if(link.getAttribute('href') === '#' + actual) {
                 link.classList.add('active');
             }
+        })
+    })
+}
+
+function scrollNav() {
+    const navLinks = document.querySelectorAll('.navPrin a');
+
+    navLinks.forEach(link => {
+
+        link.addEventListener('click', evento => {
+            evento.preventDefault();
+
+            const sectionScroll = evento.target.getAttribute('href');
+            const section = document.querySelector(sectionScroll);
+
+            section.scrollIntoView({behavior: 'smooth'});
+
         })
     })
 }
