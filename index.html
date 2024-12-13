@@ -43,7 +43,15 @@
 
     <section class="sobre-fest">
         <div class="imagen">
-            <img src="src/img/imagen_dj.jpg" alt="djfestival">
+            <picture>
+                <source srcset="build/img/imagen_dj.avif" type="image/avif" /> 
+
+                <source srcset="build/img/imagen_dj.webp" type="image/webp" /> 
+
+                <img width="300" height="200" loading="lazy" src="build/img/imagen_dj.jpg" alt="djfestival">
+            </picture>
+
+
         </div>
 
         <div class="conte-festival">
